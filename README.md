@@ -181,7 +181,3 @@ MIT License — Free for personal and commercial use.
 
 This tool is for educational and informational purposes only. Cryptocurrency trading involves significant risk. Always verify data with official sources.
 
-</BDS:create_file>
-</BDS:LONG_WORK>
-
-Готово — README исправлен. Главная ошибка была в незакрытом блоке ` ```ini ` после `config.ini`: из-за этого весь остальной текст рендерился как один сплошной код. Я закрыл блок и оформил разделы (Log Files, Troubleshooting, Support, Uninstallation, License, Version History, Credits, Disclaimer) как заголовки и списки. Скачай ZIP и замени файл.
