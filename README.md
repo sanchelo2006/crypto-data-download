@@ -27,12 +27,16 @@ Main usage - download market data and paste it for msg for neuronets for future 
 ## Installation
 
 ### Installer (Recommended)
+
 1. Download `BybitDataFetcher_Setup.exe`
 2. Run the installer
 3. Follow the installation wizard
 4. Launch from Start Menu or Desktop
 
-### Option 2: Portable Version (need to build portable version due to size limit can`t download here)
+### Option 2: Portable Version
+
+> Need to build the portable version yourself — due to size limit it can't be uploaded here.
+
 1. Download `BybitDataFetcher.exe`
 2. Run directly from any location
 3. Creates logs folder automatically
@@ -40,6 +44,7 @@ Main usage - download market data and paste it for msg for neuronets for future 
 ## Usage Guide
 
 ### Basic Usage
+
 1. **Enter Symbol**: BTCUSDT, ETHUSDT, etc.
 2. **Select Market**: Spot or Futures (linear)
 3. **Choose Timeframe**: 1m to 1M
@@ -49,25 +54,28 @@ Main usage - download market data and paste it for msg for neuronets for future 
 7. **Save Data**: Click "Save Data" to export to CSV
 
 ### Batch Fetching
+
 - Automatically fetches data in batches of 200 candles
 - Progress bar shows current status
 - Cancel button to stop long fetches
 - Console log shows detailed batch information
 
 ### Technical Indicators
-| Indicator | Default Period | Notes |
-|-----------|---------------|-------|
-| RSI | 14 | Uses EMA for averaging |
-| ADX | 14 | Wilder's smoothing method |
-| EMA 21 | 21 | Exponential Moving Average |
-| EMA 50 | 50 | Exponential Moving Average |
-| MACD | 12/26/9 | Optional indicator |
-| Bollinger Bands | 20, 2σ | Optional indicator |
+
+| Indicator         | Default Period | Notes                        |
+|-------------------|----------------|------------------------------|
+| RSI               | 14             | Uses EMA for averaging       |
+| ADX               | 14             | Wilder's smoothing method    |
+| EMA 21            | 21             | Exponential Moving Average   |
+| EMA 50            | 50             | Exponential Moving Average   |
+| MACD              | 12/26/9        | Optional indicator           |
+| Bollinger Bands   | 20, 2σ         | Optional indicator           |
 
 ## Configuration
 
 ### config.ini
-Located in installation directory. Edit to change defaults:
+
+Located in the installation directory. Edit to change defaults:
 
 ```ini
 [Defaults]
@@ -93,90 +101,87 @@ RetryDelay=1
 LogLevel=ERROR
 MaxLogSizeMB=10
 MaxBackupFiles=4
+```
 
-Log Files
-Location: %APPDATA%\BybitDataFetcher\logs\ or \logs\ in installation folder
+## Log Files
 
-Error Log: error.log - Contains error messages and stack traces
+- **Location**: `%APPDATA%\BybitDataFetcher\logs\` or `\logs\` in the installation folder
+- **Error Log**: `error.log` — Contains error messages and stack traces
+- **Info Log**: `info.log` — Contains debug information
+- **Rotation**: Logs rotate at 10MB, keeping 4 backups
 
-Info Log: info.log - Contains debug information
+## Troubleshooting
 
-Rotation: Logs rotate at 10MB, keeping 4 backups
+### Common Issues
 
-Troubleshooting
-Common Issues
-No data found
+**No data found**
 
-Check date range (older than 2020 may not be available)
+- Check date range (older than 2020 may not be available)
+- Verify symbol format (`BTCUSDT`, not `BTC/USDT`)
+- Ensure market type is correct (spot vs linear)
 
-Verify symbol format (BTCUSDT, not BTC/USDT)
+**Indicator values don't match Bybit**
 
-Ensure market type is correct (spot vs linear)
+- Indicators are calculated using Bybit's standard methods
+- First few values may be NaN (need sufficient data)
 
-Indicator values don't match Bybit
+**API rate limiting**
 
-Indicators are calculated using Bybit's standard methods
+- Built-in delays between batches
+- Retry logic for failed requests
+- Reduce date range if hitting limits
 
-First few values may be NaN (need sufficient data)
+## Support
 
-API rate limiting
+- **GitHub Issues**: Report bugs or request features
+- **Email**: sanchelo2006@yandex.ru
 
-Built-in delays between batches
+## Uninstallation
 
-Retry logic for failed requests
+### Windows
 
-Reduce date range if hitting limits
+1. Open Control Panel
+2. Go to Programs and Features
+3. Find "Bybit OHLCV Data Fetcher"
+4. Click Uninstall
 
-Support
-GitHub Issues: [Report bugs or request features]
+### Manual
 
-Email: sanchelo2006@yandex.ru
+1. Delete installation folder
+2. Remove Start Menu shortcuts
+3. Delete logs folder (optional)
 
-Uninstallation
-Windows
-Open Control Panel
+## License
 
-Go to Programs and Features
+MIT License — Free for personal and commercial use.
 
-Find "Bybit OHLCV Data Fetcher"
+## Version History
 
-Click Uninstall
+### Version 3.0.0 (2024)
 
-Manual
-Delete installation folder
+- Added technical indicators (RSI, ADX, EMA21, EMA50)
+- Improved batch fetching algorithm
+- Added error logging with rotation
+- GUI improvements and console output
+- Configurable defaults
 
-Remove Start Menu shortcuts
+### Version 2.0.0 (2024)
 
-Delete logs folder (optional)
+- Initial release
+- Basic OHLCV fetching
+- Batch processing support
 
-License
-MIT License - Free for personal and commercial use
+## Credits
 
-Version History
-Version 3.0.0 (2024)
-Added technical indicators (RSI, ADX, EMA21, EMA50)
+- Built with Python, tkinter, and PyBit
+- Icon created with custom design
+- Inno Setup for installer creation
 
-Improved batch fetching algorithm
+## Disclaimer
 
-Added error logging with rotation
-
-GUI improvements and console output
-
-Configurable defaults
-
-Version 2.0.0 (2024)
-Initial release
-
-Basic OHLCV fetching
-
-Batch processing support
-
-Credits
-Built with Python, tkinter, and PyBit
-
-Icon created with custom design
-
-Inno Setup for installer creation
-
-Disclaimer
 This tool is for educational and informational purposes only. Cryptocurrency trading involves significant risk. Always verify data with official sources.
+
+</BDS:create_file>
+</BDS:LONG_WORK>
+
+Готово — README исправлен. Главная ошибка была в незакрытом блоке ` ```ini ` после `config.ini`: из-за этого весь остальной текст рендерился как один сплошной код. Я закрыл блок и оформил разделы (Log Files, Troubleshooting, Support, Uninstallation, License, Version History, Credits, Disclaimer) как заголовки и списки. Скачай ZIP и замени файл.
