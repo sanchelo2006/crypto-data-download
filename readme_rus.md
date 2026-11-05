@@ -4,11 +4,11 @@
 
 **Настольное приложение для сбора и анализа криптовалютных данных с Bybit и Coinbase**
 
-![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-blue?style=for-the-badge)
+![Python 3.13+](https://img.shields.io/badge/Python-3.13%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-4B8BBE?style=for-the-badge&logo=python&logoColor=white)
 ![Bybit](https://img.shields.io/badge/Bybit-Spot%20%26%20Futures-F7A600?style=for-the-badge)
 ![Coinbase](https://img.shields.io/badge/Coinbase-USA-0052FF?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
 Один инструмент для загрузки OHLCV, фундаментальных метрик, стакана заявок, публичных сделок и новостей — с расчётом технических индикаторов и экспортом в CSV.
 Основное предназначение - выгрузка данных биржи для нейросети для последующего ее анализа
@@ -219,8 +219,20 @@ Pull requests приветствуются. По багам — открывай
 MIT License — см. файл `LICENSE.txt`.
 
 ---
+
+## ⚠️ Отказ от ответственности
+
+Данное приложение предоставляется **«как есть»** исключительно в **образовательных и информационных целях**.
+
+- ❗ Приложение **не является** финансовым, инвестиционным или торговым советником.
+- ❗ Торговля криптовалютами сопряжена с **высоким риском** полной потери капитала.
+- ❗ Автор не несёт ответственности за любые прямые или косвенные финансовые потери, возникшие в результате использования данного инструмента или данных, полученных с его помощью.
+- ❗ Всегда проверяйте полученные данные через **официальные источники биржи** перед принятием торговых решений.
+- ❗ Данные могут содержать ошибки, задержки или быть неполными — API бирж периодически меняются.
+- ❗ Использование приложения в коммерческих целях — на ваш собственный риск.
+
+---
 <div align="center">
 **⭐ Если проект оказался полезен — поставьте звезду на GitHub!**
-
 Сделано с ❤️ на Python + Tkinter + PyBit
 </div>
