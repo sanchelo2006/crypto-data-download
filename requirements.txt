@@ -1,0 +1,11 @@
+pybit
+numpy
+transformers
+torch
+pandas
+requests
+python-dotenv
+matplotlib
+mplfinance
+bybit-history
+feedparser
